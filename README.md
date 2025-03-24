@@ -1,6 +1,27 @@
 # From Imitation to Refinement
 
 
+### BiManual Environment and Manual Primitives 
+- [x] **Added Bi-Manual Simulation Environment**  
+- [x] **Updated URDF for Second Arm**  
+  - The second Franka arm now has its fingers extended outward to better suit the use case.  
+  - Updated file: `furniture-bench/furniture_bench/assets/franka_description_ros/franka_description/robots/franka_panda_2.urdf`  
+- [x] **Added Manual Primitive for Single-Leg Screwing (Bi-Manual Setup)**  
+  - Install State Machine Library - <i>transitions</i>
+    ```bash
+    pip install transitions
+    ```
+  - Run the primitive with:  
+    ```bash
+    python bimanual_primitive_one_leg_screwing_sm.py
+    ```  
+- [ ] **Extended Manual Primitives for Other Tasks**  
+  - Provides a baseline for additional bi-manual operations.  
+- [ ] **Enabled Teleoperation Data Collection for Bi-Manual Setup**  
+- [ ] **Extended and Fine-Tuned Policy for Bi-Manual Setup**  
+
+
+
 _**NOTE** (updated Sept 1, 2024): The repo is still under active development and we are working on making reproducing the experiments [in the paper](https://arxiv.org/pdf/2407.16677) straightforward and hosting and making available the demonstration data we collected for learning the imitation policies from._
 
 _**Update Sept 20, 2024:**_ The data used to train the models in this project is now available in an [S3 bucket](https://iai-robust-rearrangement.s3.us-east-2.amazonaws.com/index.html). We also have a script to download data for the different tasks in the right places.
