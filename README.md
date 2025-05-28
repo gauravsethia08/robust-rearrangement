@@ -20,6 +20,19 @@
 - [ ] **Enabled Teleoperation Data Collection for Bi-Manual Setup**  
 - [ ] **Extended and Fine-Tuned Policy for Bi-Manual Setup**  
 
+### Video Demonstration of Bi-Manual Primitive
+
+<video width="100%" controls>
+  <source src="bimanual_primitive_demo.mp4" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
+- The video shows the bi-manual primitive executing a complete one-leg screwing task
+- Both arms coordinate: one arm holds the table leg while the other performs the screwing motion
+
+
+### NOTE:
+I wanted to extend the method to have FT sensors to end-effectors to have force feedback as well in our observation space. But turns out IsaacGym has [known issues with measuring forces](https://github.com/NVIDIA-Omniverse/PhysX/issues/276) (while they say it will be fixed, but it hasn't been fixed yet), and thus going further would try to simulate things in MuJoCo or other simulators that can model forces more accurately. 
 
 
 _**NOTE** (updated Sept 1, 2024): The repo is still under active development and we are working on making reproducing the experiments [in the paper](https://arxiv.org/pdf/2407.16677) straightforward and hosting and making available the demonstration data we collected for learning the imitation policies from._
